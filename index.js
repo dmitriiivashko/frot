@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require('build/app');
+require(require('path').resolve(__dirname, 'build/app'));
