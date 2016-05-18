@@ -53,7 +53,7 @@ request.get(INSTALL_URL, {
   });
 })
 .on('data', (chunk) => {
-  bar.tick(chunk.length);
+  bar.tick(chunk && chunk.length ? chunk.length : 0);
   data.push(chunk);
   dataLen += chunk.length;
 })
